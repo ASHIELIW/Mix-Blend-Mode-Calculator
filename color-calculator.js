@@ -12,37 +12,37 @@ window.addEventListener('DOMContentLoaded', () => {
     const result_3 = document.getElementById("result-color-3");
     const result_4 = document.getElementById("result-color-4");
     function Multiply(a,b) {
-        var new_R =  Math.round(Number(("0x"+ a.substring(1,3))).toString(10) * Number(("0x"+ b.substring(1,3))).toString(10) /255).toString(16);
-        var new_G =  Math.round(Number(("0x"+ a.substring(3,5))).toString(10) * Number(("0x"+ b.substring(3,5))).toString(10) /255).toString(16);
-        var new_B =  Math.round(Number(("0x"+ a.substring(5))).toString(10) * Number(("0x"+ b.substring(5))).toString(10) /255).toString(16);
+        var new_R =  Math.round(Number(("0x"+ a.substring(1,3)).toString(10)) * Number(("0x"+ b.substring(1,3)).toString(10)) /255).toString(16);
+        var new_G =  Math.round(Number(("0x"+ a.substring(3,5)).toString(10)) * Number(("0x"+ b.substring(3,5)).toString(10)) /255).toString(16);
+        var new_B =  Math.round(Number(("0x"+ a.substring(5)).toString(10)) * Number(("0x"+ b.substring(5)).toString(10)) /255).toString(16);
         var new_HEX = `#${(Array(2).join(0) + new_R).slice(-2)}${(Array(2).join(0) + new_G).slice(-2)}${(Array(2).join(0) + new_B).slice(-2)}`;
         return new_HEX;
     }
     function Difference(a,b) {
-        var new_R =  Math.abs(Number(("0x"+ a.substring(1,3))).toString(10) - Number(("0x"+ b.substring(1,3))).toString(10) /255).toString(16);
-        var new_G =  Math.abs(Number(("0x"+ a.substring(3,5))).toString(10) - Number(("0x"+ b.substring(3,5))).toString(10) /255).toString(16);
-        var new_B =  Math.abs(Number(("0x"+ a.substring(5))).toString(10) - Number(("0x"+ b.substring(5))).toString(10) /255).toString(16);
+        var new_R =  Math.abs(Number(("0x"+ a.substring(1,3)).toString(10)) - Number(("0x"+ b.substring(1,3)).toString(10))).toString(16);
+        var new_G =  Math.abs(Number(("0x"+ a.substring(3,5)).toString(10)) - Number(("0x"+ b.substring(3,5)).toString(10))).toString(16);
+        var new_B =  Math.abs(Number(("0x"+ a.substring(5)).toString(10)) - Number(("0x"+ b.substring(5)).toString(10))).toString(16);
         var new_HEX = `#${(Array(2).join(0) + new_R).slice(-2)}${(Array(2).join(0) + new_G).slice(-2)}${(Array(2).join(0) + new_B).slice(-2)}`;
         return new_HEX;
     }
     function Screen(a,b) {
-        var new_R =  Math.round(255 - ((255 - Number(("0x"+ a.substring(1,3))).toString(10)) * (255 - Number(("0x"+ b.substring(1,3))).toString(10))) /255).toString(16);
-        var new_G =  Math.round(255 - ((255 - Number(("0x"+ a.substring(3,5))).toString(10)) * (255 - Number(("0x"+ b.substring(3,5))).toString(10))) /255).toString(16);
-        var new_B =  Math.round(255 - ((255 - Number(("0x"+ a.substring(5))).toString(10)) * (255 - Number(("0x"+ b.substring(5))).toString(10))) /255).toString(16);
+        var new_R =  Math.round(255 - ((255 - Number(("0x"+ a.substring(1,3)).toString(10))) * (255 - Number(("0x"+ b.substring(1,3)).toString(10)))) /255).toString(16);
+        var new_G =  Math.round(255 - ((255 - Number(("0x"+ a.substring(3,5)).toString(10))) * (255 - Number(("0x"+ b.substring(3,5)).toString(10)))) /255).toString(16);
+        var new_B =  Math.round(255 - ((255 - Number(("0x"+ a.substring(5)).toString(10))) * (255 - Number(("0x"+ b.substring(5)).toString(10)))) /255).toString(16);
         var new_HEX = `#${(Array(2).join(0) + new_R).slice(-2)}${(Array(2).join(0) + new_G).slice(-2)}${(Array(2).join(0) + new_B).slice(-2)}`;
         return new_HEX;
     }
     function Darken(a,b) {
-        var new_R =  Math.min.apply(null,[ Number(("0x"+ a.substring(1,3))).toString(10),Number(("0x"+ b.substring(1,3))).toString(10)]).toString(16);
-        var new_G =  Math.min.apply(null,[ Number(("0x"+ a.substring(3,5))).toString(10),Number(("0x"+ b.substring(3,5))).toString(10)]).toString(16);
-        var new_B =  Math.min.apply(null,[ Number(("0x"+ a.substring(5))).toString(10),Number(("0x"+ b.substring(5))).toString(10)]).toString(16);
+        var new_R =  Math.min.apply(null,[ Number(("0x"+ a.substring(1,3)).toString(10)),Number(("0x"+ b.substring(1,3)).toString(10))]).toString(16);
+        var new_G =  Math.min.apply(null,[ Number(("0x"+ a.substring(3,5)).toString(10)),Number(("0x"+ b.substring(3,5)).toString(10))]).toString(16);
+        var new_B =  Math.min.apply(null,[ Number(("0x"+ a.substring(5)).toString(10)),Number(("0x"+ b.substring(5)).toString(10))]).toString(16);
         var new_HEX = `#${(Array(2).join(0) + new_R).slice(-2)}${(Array(2).join(0) + new_G).slice(-2)}${(Array(2).join(0) + new_B).slice(-2)}`;
         return new_HEX;
     }
     function Lighten(a,b) {
-        var new_R =  Math.max.apply(null,[ Number(("0x"+ a.substring(1,3))).toString(10),Number(("0x"+ b.substring(1,3))).toString(10)]).toString(16);
-        var new_G =  Math.max.apply(null,[ Number(("0x"+ a.substring(3,5))).toString(10),Number(("0x"+ b.substring(3,5))).toString(10)]).toString(16);
-        var new_B =  Math.max.apply(null,[ Number(("0x"+ a.substring(5))).toString(10),Number(("0x"+ b.substring(5))).toString(10)]).toString(16);
+        var new_R =  Math.max.apply(null,[ Number(("0x"+ a.substring(1,3)).toString(10)),Number(("0x"+ b.substring(1,3)).toString(10))]).toString(16);
+        var new_G =  Math.max.apply(null,[ Number(("0x"+ a.substring(3,5)).toString(10)),Number(("0x"+ b.substring(3,5)).toString(10))]).toString(16);
+        var new_B =  Math.max.apply(null,[ Number(("0x"+ a.substring(5)).toString(10)),Number(("0x"+ b.substring(5)).toString(10))]).toString(16);
         var new_HEX = `#${(Array(2).join(0) + new_R).slice(-2)}${(Array(2).join(0) + new_G).slice(-2)}${(Array(2).join(0) + new_B).slice(-2)}`;
         return new_HEX;
     }
@@ -54,23 +54,23 @@ window.addEventListener('DOMContentLoaded', () => {
         return new_HEX;
     }
     function Color_Dodge(a,b) {
-        var new_R =  Math.min.apply(null, [255,Math.round(Number(("0x"+ a.substring(1,3))).toString(10) + Number(("0x"+ a.substring(1,3))).toString(10) * Number(("0x"+ b.substring(1,3))).toString(10) / (255 - Number(("0x"+ b.substring(1,3))).toString(10)))]).toString(16);
-        var new_G =  Math.min.apply(null, [255,Math.round(Number(("0x"+ a.substring(3,5))).toString(10) + Number(("0x"+ a.substring(3,5))).toString(10) * Number(("0x"+ b.substring(3,5))).toString(10) / (255 - Number(("0x"+ b.substring(3,5))).toString(10)))]).toString(16);
-        var new_B =  Math.min.apply(null, [255,Math.round(Number(("0x"+ a.substring(5))).toString(10) + Number(("0x"+ a.substring(5))).toString(10) * Number(("0x"+ b.substring(5))).toString(10) / (255 - Number(("0x"+ b.substring(5))).toString(10)))]).toString(16);
+        var new_R =  Math.min.apply(null, [255,Math.round(Number(("0x"+ a.substring(1,3)).toString(10)) + Number(("0x"+ a.substring(1,3)).toString(10)) * Number(("0x"+ b.substring(1,3)).toString(10)) / (255 - Number(("0x"+ b.substring(1,3)).toString(10))))]).toString(16);
+        var new_G =  Math.min.apply(null, [255,Math.round(Number(("0x"+ a.substring(3,5)).toString(10)) + Number(("0x"+ a.substring(3,5)).toString(10)) * Number(("0x"+ b.substring(3,5)).toString(10)) / (255 - Number(("0x"+ b.substring(3,5)).toString(10))))]).toString(16);
+        var new_B =  Math.min.apply(null, [255,Math.round(Number(("0x"+ a.substring(5)).toString(10)) + Number(("0x"+ a.substring(5)).toString(10)) * Number(("0x"+ b.substring(5)).toString(10)) / (255 - Number(("0x"+ b.substring(5)).toString(10))))]).toString(16);
         var new_HEX = `#${(Array(2).join(0) + new_R).slice(-2)}${(Array(2).join(0) + new_G).slice(-2)}${(Array(2).join(0) + new_B).slice(-2)}`;
         return new_HEX;
     }
     function Linear_Burn(a,b) {
-        var new_R =  Math.max.apply(null, [0, (Number(("0x"+ a.substring(1,3))).toString(10) + Number(("0x"+ b.substring(1,3))).toString(10) -255) ]).toString(16);
-        var new_G =  Math.max.apply(null, [0, (Number(("0x"+ a.substring(3,5))).toString(10) + Number(("0x"+ b.substring(3,5))).toString(10) -255) ]).toString(16);
-        var new_B =  Math.max.apply(null, [0, (Number(("0x"+ a.substring(5))).toString(10) + Number(("0x"+ b.substring(5))).toString(10) -255) ]).toString(16);
+        var new_R =  Math.max.apply(null, [0, Number((Number(("0x"+ a.substring(1,3)).toString(10)) + Number(("0x"+ b.substring(1,3)).toString(10) -255))) ]).toString(16);
+        var new_G =  Math.max.apply(null, [0, Number((Number(("0x"+ a.substring(3,5)).toString(10)) + Number(("0x"+ b.substring(3,5)).toString(10) -255))) ]).toString(16);
+        var new_B =  Math.max.apply(null, [0, Number((Number(("0x"+ a.substring(5)).toString(10)) + Number(("0x"+ b.substring(5)).toString(10) -255))) ]).toString(16);
         var new_HEX = `#${(Array(2).join(0) + new_R).slice(-2)}${(Array(2).join(0) + new_G).slice(-2)}${(Array(2).join(0) + new_B).slice(-2)}`;
         return new_HEX;
     }
     function Linear_Dodge(a,b) {
-        var new_R =  Math.min.apply(null, [255, (Number(("0x"+ a.substring(1,3))).toString(10) + Number(("0x"+ b.substring(1,3))).toString(10)) ]).toString(16);
-        var new_G =  Math.min.apply(null, [255, (Number(("0x"+ a.substring(3,5))).toString(10) + Number(("0x"+ b.substring(3,5))).toString(10)) ]).toString(16);
-        var new_B =  Math.min.apply(null, [255, (Number(("0x"+ a.substring(5))).toString(10) + Number(("0x"+ b.substring(5))).toString(10)) ]).toString(16);
+        var new_R =  Math.min.apply(null, [255, Number((Number(("0x"+ a.substring(1,3)).toString(10)) + Number(("0x"+ b.substring(1,3)).toString(10)))) ]).toString(16);
+        var new_G =  Math.min.apply(null, [255, Number((Number(("0x"+ a.substring(3,5)).toString(10)) + Number(("0x"+ b.substring(3,5)).toString(10)))) ]).toString(16);
+        var new_B =  Math.min.apply(null, [255, Number((Number(("0x"+ a.substring(5)).toString(10)) + Number(("0x"+ b.substring(5)).toString(10)))) ]).toString(16);
         var new_HEX = `#${(Array(2).join(0) + new_R).slice(-2)}${(Array(2).join(0) + new_G).slice(-2)}${(Array(2).join(0) + new_B).slice(-2)}`;
         return new_HEX;
     }
@@ -161,7 +161,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
     
-    var functions = [Multiply, Difference, Screen, Darken, Lighten, Color_Burn, Linear_Burn, Linear_Dodge];
+    var functions = [Multiply, Difference, Screen, Darken, Lighten, Color_Burn,Color_Dodge, Linear_Burn, Linear_Dodge];
     var functions_reverse = [Multiply_reverse,Difference_reverse,Screen_reverse];
 
     let reg =  /^#?([0-9a-fA-F]{6})$/;
