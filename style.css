@@ -1,0 +1,136 @@
+body {
+    background:#FFFBF0;
+}
+h1 {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight:600;
+    color:#E84DBC;
+    margin:50px 0;
+}
+h3 {
+    font-family: 'Montserrat';
+    font-weight:600;
+    color:#291F8A;
+    text-align: center;
+}
+
+div.color-circle {
+    background:#000;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    margin:20px;
+}
+div#color-1 {
+    background: #291F8A;
+}
+div#color-2 {
+    background: #FF85E8;
+}
+div#color-3 {
+    background: #291F8A;
+}
+div#color-4 {
+    background: #FF85E8;
+}
+div.color-circles-container {
+    position:relative;
+    width:150px;
+    height:100px;
+    margin:20px;
+}
+div#result-color-1 {
+    position:absolute;
+    left:0;
+    width:100px;
+    height:100px;
+    background:#291F8A;
+    border-radius: 50%;
+}
+div#result-color-2 {
+    position:absolute;
+    left:50px;
+    width:100px;
+    height:100px;
+    background:#FF85E8;
+    border-radius: 50%;
+}
+div#result-color-3 {
+    position:absolute;
+    left:0;
+    width:100px;
+    height:100px;
+    background:#8b36af;
+    border-radius: 50%;
+    clip-path: circle(50px at 100px 50px);
+}
+#result-color-4 {
+    background:#8b36af;
+}
+input {
+    border:#291F8A 2px solid;
+    background:transparent;
+    border-radius: 10px;
+    height:40px;
+    width:160px;
+    padding:0 10px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight:600;
+    color:#291F8A;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */ 
+    font-size:13px;
+    color:#80C3ED; 
+    
+    } 
+    
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    font-size:13px;
+    color:#80C3ED; 
+    
+    } 
+    
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    font-size:13px;
+    color:#80C3ED; 
+    
+    } 
+    
+    input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    font-size:13px;
+    color:#80C3ED; 
+    
+    } 
+
+select {
+    height:fit-content;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight:400;
+    color:#291F8A;
+    padding:5px 10px;
+    width:fit-content;
+    border:#291F8A 2px solid;
+    background:transparent;
+    border-radius: 10px;
+
+}
+option {
+    font-family: 'Montserrat';
+    font-weight:400;
+    color:#291F8A;
+    font-size: 20px !important;
+    background: transparent;
+}
+
+a {
+    color:inherit;
+}
+footer p {
+    color:#291F8A;
+    font-family: "Montserrat";
+    font-weight: 500;
+    padding-left:20px;
+}

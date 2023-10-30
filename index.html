@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix Color Calculator</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://github.com/JulietaUla/Montserrat/blob/master/fonts/webfonts/Montserrat.css" rel="stylesheet">
+    <script src="color-calculator.js"></script>
+    <!-- Copyright 2023 Ashley Wang
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License. -->
+</head>
+<body>
+    <header>
+       <h1>Mix Blend Mode Calculator</h1>
+    </header>
+    <form id="input-box-1">
+        <h3 style="width:100%;font-size:25px">Enter the colors you want to blend</h3>
+        <div style="display:flex;flex-direction: row;flex-wrap: wrap;justify-items:center;justify-content: center;align-items: center;">
+            <div style="display:flex;flex-direction: column;align-items: center;margin:30px">
+                <div class="color-circle" id="color-1"></div>
+                <input type="text" placeholder="#HEX of Background" id="input-1" maxlength="7">
+            </div>
+            <div style="display:flex;flex-direction: column;align-items: center;margin:30px">
+                <div class="color-circle" id="color-2"></div>
+                <input type="text" placeholder="#HEX of Blend Color" id="input-2" maxlength="7">
+            </div>
+            <select id="mode">
+                <option value="0">Multiply</option>
+                <option value="1">Difference</option>
+                <option value="2">Screen</option>
+                <option value="3">Darken</option>
+                <option value="4">Lighten</option>
+                <option value="5">Color Burn</option>
+                <option value="6">Linear Burn</option>
+                <option value="7">Linear Dodge</option>
+                <option value="mode-default" selected>Select mix blend mode</option>
+            </select>
+            <div style="display:flex;flex-direction: column;align-items: center;margin:60px 30px 30px 30px">
+                <div class="color-circles-container" id="color-result">
+                    <div id="result-color-1"></div>
+                    <div id="result-color-2"></div>
+                    <div id="result-color-3"></div>
+                </div>
+                <h3>Result: <span id="resultHEX-1">#HEX</span></h3>
+            </div>
+        </div>
+
+    </form>
+    <form id="input-box-2">
+        <h3 style="width:100%;font-size:25px">Reverse colors blend</h3>
+        <div style="display:flex;flex-direction: row;flex-wrap: wrap;justify-items:center;justify-content: center;align-items:start;">
+                <div style="display:flex;flex-direction: column;align-items: center;margin:30px" id="color-result-2">
+                    <div class="color-circle" id="result-color-4"></div>
+                    <input type="text" placeholder="#HEX of Blend Result" id="input-3" maxlength="7">
+                </div>
+            <select style="margin-top: 100px;" id="mode-2">
+                <option value="0">Multiply</option>
+                <option value="1">Difference</option>
+                <option value="2">Screen</option>
+                <option value="mode-default" selected>Select mix blend mode</option>
+            </select>
+            <div style="display:flex;flex-direction: column;align-items: center;margin:30px">
+                <div class="color-circle" id="color-3"></div>
+                <input type="text" placeholder="#HEX of Color 1" id="input-4" maxlength="7">
+            </div>
+            <div style="display:flex;flex-direction: column;align-items: center;margin:30px">
+                <div class="color-circle" id="color-4"></div>
+                <h3>Color 2: <br><span id="resultHEX-2">#HEX</span></h3>
+            </div>
+        </div>
+    </form>
+    <footer>
+        <p>
+            Created by <a href="https:ashleyw.art">AshleyW</a>
+        </p>
+        <p>Licensed under the Apache License, Version 2.0</p>
+    </footer>
+</body>
+</html>
