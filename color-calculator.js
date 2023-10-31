@@ -127,7 +127,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 G_b.forEach(function(G){
                     B_b.forEach(function(B){
                         var candidate_HEX = `#${(Array(2).join(0) +  R.toString(16)).slice(-2)}${(Array(2).join(0) +  G.toString(16)).slice(-2)}${(Array(2).join(0) +  B.toString(16)).slice(-2)}`;
-                        //就是这里呃，能不能把 RGB 连接起来组合情况输出成数组
                         all_HEX.push(candidate_HEX);
                     })
                 })
@@ -165,7 +164,14 @@ window.addEventListener('DOMContentLoaded', () => {
     var functions_reverse = [Multiply_reverse,Difference_reverse,Screen_reverse];
 
     let reg =  /^#?([0-9a-fA-F]{6})$/;
+    let reg_2 =  /^([A-Fa-f0-9]{6})$/;
+    var inputs = [input1, input2,input3,input4];
     window.addEventListener('input', () => {
+        inputs.forEach(function(input){
+            if (reg_2.test(input.value)) {
+                input.value = "#"+ input.value;
+            }
+        });
         if (reg.test(input1.value)) {
             color1.style.setProperty("background",input1.value);
             result_1.style.setProperty("background",input1.value);
